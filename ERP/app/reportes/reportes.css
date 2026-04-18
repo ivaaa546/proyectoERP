@@ -1,0 +1,192 @@
+.reportesContainer {
+  padding: 2rem;
+  background-color: #f1f5f9;
+  min-height: 100vh;
+}
+
+.reportesHeader {
+  margin-bottom: 2rem;
+}
+
+.reportesHeader h1 {
+  font-size: 1.875rem;
+  color: #0f172a;
+}
+
+.reportesHeader p {
+  color: #64748b;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.reportCard {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.reportCard:hover {
+  transform: translateY(-2px);
+  border-color: #2563eb;
+}
+
+.reportCard h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reportCard p {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.actionGroup {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-secondary {
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+.btn-secondary:hover {
+  background-color: #e2e8f0;
+}
+
+.btn-preview {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.btn-preview:hover {
+  background-color: #bbf7d0;
+}
+
+/* Modal styles for preview */
+.modalOverlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 100;
+}
+
+.modalContent {
+  background: white;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 1000px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.modalHeader {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+}
+
+.modalHeader h2 {
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin: 0;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.75rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modalBody {
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.dataTable th {
+  padding: 1rem;
+  text-align: left;
+  background: #f8fafc;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.dataTable td {
+  padding: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+}
+
+.dataTable tr:hover td {
+  background: #f8fafc;
+}
+
+.loadingWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  color: #64748b;
+  font-weight: 500;
+}

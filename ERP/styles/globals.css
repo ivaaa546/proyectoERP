@@ -1,0 +1,23 @@
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f8fa;
+  color: #1f2937;
+}
+
+a {
+  color: #0f766e;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

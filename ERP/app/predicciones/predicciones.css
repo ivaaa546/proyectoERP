@@ -1,0 +1,226 @@
+.prediccionesContainer {
+  padding: 2rem;
+  background-color: #f1f5f9;
+  min-height: 100vh;
+}
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.pageHeader h1 {
+  font-size: 1.875rem;
+  color: #0f172a;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #e2e8f0;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.formGroup {
+  margin-bottom: 1.25rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+.formGroup input, .formGroup select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.btnPrimary {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btnPrimary:hover {
+  background-color: #1d4ed8;
+}
+
+.btnPrimary:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.btnSecondary {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btnSecondary:hover {
+  background-color: #059669;
+}
+
+.btnSecondary:disabled {
+  background-color: #6ee7b7;
+  cursor: not-allowed;
+}
+
+.observationsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  background-color: #f8fafc;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.removeBtn {
+  color: #ef4444;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.alert {
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alert.success { background-color: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+.alert.error { background-color: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+.alert.info { background-color: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; }
+
+.resultsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .resultsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chartContainer {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  min-height: 300px;
+}
+
+.summaryBox {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.metricCard {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 12px;
+  flex: 1;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+}
+
+.metricValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.metricLabel {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+@media print {
+  body { 
+    background: white; 
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .no-print, .navbar, .btnPrimary, .addBtn, .removeBtn { display: none !important; }
+  
+  .prediccionesContainer {
+    padding: 1rem;
+    background: white;
+  }
+
+  .card { 
+    box-shadow: none; 
+    border: 1px solid #ccc;
+    page-break-inside: avoid;
+    margin-bottom: 2rem;
+  }
+
+  .chartContainer { 
+    height: 250px;
+    page-break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .resultCard { margin-top: 2rem; }
+  
+  /* Asegurar que las tablas sean legibles en blanco y negro/impresión */
+  .table th { background-color: #eee !important; color: black !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

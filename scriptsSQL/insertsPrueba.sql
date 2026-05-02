@@ -35,9 +35,9 @@ INSERT INTO Inventario (id_producto, stock_actual, stock_minimo) VALUES
 (4, 5, 2);   -- ID Sofá
 
 -- 6. Insertar Clientes (Incluyendo Consumidor Final)
-INSERT INTO Clientes (nombre, documento_identidad, telefono) VALUES 
-('Consumidor Final', 'C/F', '00000000'),
-('Juan Perez', '1234567-8', '5555-1234');
+INSERT INTO Clientes (nombres, apellidos, documento_identidad, telefono) VALUES 
+('Consumidor', 'Final', 'C/F', '00000000'),
+('Juan', 'Perez', '1234567-8', '5555-1234');
 
 -- Verificación rápida
 SELECT 'Roles' as Tabla, COUNT(*) as Registros FROM Roles

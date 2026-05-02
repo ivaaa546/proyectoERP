@@ -4,6 +4,9 @@ GO
 -- Script para insertar 30 días de ventas de prueba
 -- Ejecutar todo este bloque en SQL Server Management Studio
 
+-- Aumentamos el stock temporalmente para que no falle el trigger por las 30 ventas aleatorias
+UPDATE Inventario SET stock_actual = 100;
+
 DECLARE @fecha DATE = DATEADD(DAY, -30, GETDATE());
 DECLARE @dias INT = 0;
 

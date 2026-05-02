@@ -21,8 +21,8 @@ export async function POST(req: NextRequest) {
     const pool = await getDbPool();
     await pool
       .request()
-      .input("id_usuario", sql.Int, idUsuario)
-      .input("ruta_base", sql.NVarChar(255), rutaBase)
+      .input("id_usuario", idUsuario)
+      .input("ruta_base", rutaBase)
       .execute("sp_GenerarBackup");
 
     return NextResponse.json({ ok: true, message: "Backup ejecutado" });
